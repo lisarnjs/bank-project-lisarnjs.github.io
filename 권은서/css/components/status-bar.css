@@ -1,0 +1,31 @@
+.status-bar {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    height: 44px;
+    /* position: fixed;
+    top: 0; */
+}
+
+.status-bar .status-bar__column:first-child {
+    margin-left: 27px;
+}
+.status-bar .status-bar__column:first-child {
+    font-weight: bold;
+}
+
+.status-bar .status-bar__column:last-child {
+    margin-right: 14px;
+}
+
+@media (max-width: 375px) {
+    .status-bar {
+        /* width: 100%; */
+    }
+}

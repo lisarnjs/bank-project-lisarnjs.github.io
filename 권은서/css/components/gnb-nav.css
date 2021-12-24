@@ -1,0 +1,21 @@
+.gnb {
+    width: 375px;
+    height: 76px;
+    position: fixed;
+    z-index: 998;
+    top: 736px;
+    left: 0px;
+    background: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
+}
+.gnb__list {
+    height: 76px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.gnb__list .gnb__btn {
+    color: #fff;
+}
+.gnb__list .gnb__btn:first-child {
+    color: rgba(0, 0, 0, 0.6);
+}

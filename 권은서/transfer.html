@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>team-mashi/이체</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script defer src="https://kit.fontawesome.com/8db13e2679.js" crossorigin="anonymous"></script>
+    <script defer src="./js/transfer.js"></script>
+</head>
+<body>
+    <div class="status-bar">
+        <div class="status-bar__column">
+            <span>9:41</span>
+        </div>
+        <div class="status-bar__column">
+            <i class="fas fa-signal "></i>
+            <i class="fas fa-wifi "></i>
+            <i class="fas fa-battery-full fa-lg"></i>
+        </div>
+    </div>
+
+    <main>
+        <section class="transfer-input">
+            <header>이체</header>
+            <div class="transfer-input__account">
+                <img src="image/avatar04.png" alt="정을수">
+                <div class="transfer__contents">
+                    <h4>정을수</h4>
+                    <h5>신한 112048393002</h5>
+                </div>
+                <div class="transfer__star-icon">
+                    <span class="material-icons">star</span>
+                </div>
+            </div>
+            <div class="transfer-input__money">
+                <span class="transfer-input__money--input"></span>
+                <span>원</span>
+            </div>
+            <div class="transfer-input__balance">
+                <span>생활비 계좌 : 1,752,900 에서</span>
+            </div>
+            <div class="transfer-input__number">
+                <div>
+                    <span onclick="num(1)">1</span>
+                    <span onclick="num(2)">2</span>
+                    <span onclick="num(3)">3</span>
+                </div>
+                <div>
+                    <span onclick="num(4)">4</span>
+                    <span onclick="num(5)">5</span>
+                    <span onclick="num(6)">6</span>
+                </div>
+                <div>
+                    <span onclick="num(7)">7</span>
+                    <span onclick="num(8)">8</span>
+                    <span onclick="num(9)">9</span>
+                </div>
+                <div>
+                    <span onclick="num(0)">0</span>
+                    <span onclick="num(10)">00</span>
+                    <span onclick="deleteNum()" class="material-icons">west</span>
+                </div>
+            </div>
+            <div class="transfer-input__next-btn" onclick="next()">다음</div>
+            <span class="transfer__cancel">취소</span>
+        </section>
+
+        <!-- 이체 성공 화면 -->
+        <!-- <section class="transfer-clear"></section> -->
+    </main>
+
+    <nav class="gnb">
+        <ul class="gnb__list">
+            <li class="gnb__btn"><span class="material-icons">home</span></li>
+            <li class="gnb__btn"><span class="material-icons">sync_alt</span></li>
+            <li class="gnb__btn"><span class="material-icons">comment</span></li>
+            <li class="gnb__btn"><span class="material-icons">more_horiz</span></li>
+        </ul>
+    </nav>
+</body>
+</html>
