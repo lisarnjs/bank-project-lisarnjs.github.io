@@ -1,0 +1,23 @@
+
+
+@import url('variables.css');
+
+/* components */
+@import url('components/status-bar.css');
+@import url('components/gnb-nav.css');
+
+/* screens */
+@import url('screens/account.css');
+@import url('screens/son.css');
+@import url('screens/grandma.css');
+@import url('screens/transfer.css');
+@import url('screens/outgoings.css');
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    font-size: 14px;
+    font-weight: 500;
+}

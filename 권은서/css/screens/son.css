@@ -1,0 +1,17 @@
+.account__info .account__chart .chart-blue {
+    background-color: #4C89FF;
+}
+
+.payout.son {
+    top: 260px;
+    height: 420px;
+}
+.payout__inner.son {
+    height: 547px;
+}
+.payout.son .payout__bucket-list > ul > li:first-child > div.bucket-skyblue {
+    background-color: #55ACEE;
+}
+.payout.son .payout__bucket-list > ul > li:nth-child(2) > div.bucket-green {
+    background-color: #005F59;
+}

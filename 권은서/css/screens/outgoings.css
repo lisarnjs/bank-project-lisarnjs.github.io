@@ -1,0 +1,22 @@
+.outgoings {
+    width: 375px;
+    height: 736px;
+    position: absolute;
+    z-index: 30;
+    top: 1471px;
+    /* 임시로 pink 해논거임 구분하기 위해서 */
+    background-color: pink;
+}
+.outgoings .outgoings__setting .outgoings__chart {
+    /* width: 308px;
+    height: 28px;
+    background-color: tomato;
+    box-sizing: border-box; */
+}
+.outgoings .outgoings__setting .outgoings__chart .outgoings__chart--gray {
+    /* width: 308px;
+    height: 9px;
+    background-color: #C4C4C4;
+    border-radius: 3px;
+    margin */
+}

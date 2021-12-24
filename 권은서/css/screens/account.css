@@ -1,0 +1,278 @@
+body {
+    background-color: var(--home-color);
+}
+
+main {
+    /* height: 1000vh; */
+    height: 680px;
+    overflow: hidden;
+    /*다 만들고 height값 다시 지정하기*/
+    /* padding-top: var(--main-padding-top); */
+    padding-top: 56px;
+    position: relative;
+}
+
+/* section 1 == main__acount */
+.main__account {
+    height: 297px;
+}
+.account__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.account__header .material-icons {
+    font-size: 27px;
+}
+.account__header > div i {
+    color: orange;
+}
+.account__header > div i:first-child {
+    margin-right: 15px;
+}
+.account__header .account__header--title {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.24px;
+}
+.account__info {
+    background-color: white;
+    margin: 33px 48px 24px;
+    width: 279px;
+    height: 155px;
+    border-radius: 12px;
+    position: relative;
+}
+.account__info .account__number {
+    width: 135px;
+    height: 21px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 21px;
+    letter-spacing: -0.24px;
+    font-weight: 500;
+    color: #858585;
+    padding: 14px 73px;
+}
+.account__info .acount__money {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #000;
+    font-weight: 500;
+    margin: 2px 59px 11px 59px;
+}
+.account__info .acount__money span{
+    font-size: 14px;
+}
+
+.account__info .account__chart  {
+    width: 202px;
+    height: 17px;
+}
+.account__info .account__chart .account__chart--score {
+    width: 128px;
+    height: 6px;
+    background-color: #FFDB4C;
+    border-radius: 3px 0px 0px 3px;
+    position: absolute;
+    top: 110px;
+    left: 32px;
+    z-index: 2;
+}
+.account__info .account__chart .account__chart--red {
+    width: 4px;
+    height: 17px;
+    background-color: #FF5F00;
+    border-radius: 5px;
+    border: 2px solid #FFF;
+    position: absolute;
+    top: 103px;
+    left: 160px;
+    z-index: 3;
+}
+.account__info .account__chart .account__chart--gray {
+    width: 202px;
+    height: 6px;
+    background-color: #C4C4C4;
+    border-radius: 3px;
+    position: absolute;
+    top: 110px;
+    left: 32px;
+}
+.account__info .account__chart--icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 98px;
+    left: 241px;
+}
+.account__info .account__chart--score-msg {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #858585;
+    font-weight: 500;
+}
+.account__info .account__transfer--btn {
+    position: absolute;
+    top: 14px;
+    left: 236px;
+    line-height: 21px;
+    letter-spacing: -0.24px;
+}
+.account__ad {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #000;
+}
+.account__ad a {
+    padding-left: 6px;
+    text-decoration-line: underline;        
+}
+/* section 2 == payout */
+
+/* js 동적 class */
+.payout.payout-up {
+    top: 99px;
+    height: 637px;
+}
+.payout__inner.inner-up {
+    height: 548px;
+}
+
+.payout {
+    background-color: #F5F5F5;
+    box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08);
+    border-radius: 30px 30px 0 0;
+    width: 375px;
+    height: 383px;
+    position: absolute;
+    z-index: 10;
+
+    top: 353px;
+
+    left: 0;
+    /* overflow-y: scroll; */
+    transition: .5s;
+}
+.payout__scroll-btn {
+    width: 48px;
+    height: 2px;
+    background-color: #C4C4C4;
+    border-radius: 4px;
+
+    position: sticky;
+    top: 4px;
+    z-index: 3;
+
+    margin: 4px auto 16px;
+}
+.payout__bucket-list {
+    width: 308px;
+    height: 49px;
+    /* position: absolute; */
+    position: sticky;
+    z-index: 2;
+    top: 23px;
+    left: 30px;
+    right: 30px;
+    display: flex;
+    overflow-x: scroll;
+}
+.payout__bucket-list ul {
+    display: flex;
+    position: relative;
+}
+
+.payout__bucket-list ul > li > div:first-child {
+    border-radius: 6px 0 0 6px;
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+    box-sizing: border-box;
+    padding: 5px 0 0 13px;
+}
+.payout__bucket-list ul > li > div:last-child {
+    width: 162px;
+    height: 47px;
+    background-color: #DADADA;
+    border-radius: 6px;
+    margin-right: 13px;
+}
+.payout__bucket-list ul > li:first-child > div:first-child {
+    background-color: #FF5F00;
+    width: 97px;
+    height: 47px;
+}
+.payout__bucket-list ul > li:nth-child(2) > div:first-child {
+    background-color: #FEB700;
+    width: 121px;
+    height: 47px;
+}
+.payout__bucket-list .payout__bucket-list--moneybank {
+    width: 120px;
+    height: 47px;
+    box-sizing: border-box;
+    color: #FF5F00;
+    text-align: center;
+    display: flex;
+}
+.payout__bucket-list .payout__bucket-list--moneybank .material-icons {
+    padding-top: 8px;
+    padding-right: 5px;
+}
+.payout__bucket-list .payout__bucket-list--moneybank span:last-child {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    padding-top: 9px;
+}
+.payout__inner {
+    width: 302px;
+    /* height: 709px; */
+    height: 294px;
+
+    margin: 16px 36px 0;
+    overflow: scroll;
+    /* position: absolute;
+    top: 89px;
+    left: 36px; */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* overflow-y: scroll; */
+}
+
+.payout__inner .payout__list {
+    margin-bottom: 38px;
+}
+.payout__inner .payout__list .payout__list--title {
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+.payout__inner .payout__list .payout__list--title span:last-child {
+    color: #B4B4B4;
+}
+.payout__inner .payout__list .payout__list--contents {
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+}
+.payout__inner .payout__list .payout__list--contents > li {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #DCDCDC;
+    margin-top: 8px;
+}

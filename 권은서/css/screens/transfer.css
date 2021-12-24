@@ -1,0 +1,202 @@
+/* transfer 동적 class */
+.transfer.scroll-up {
+    top: 0;
+}
+
+/* transfer 기본 화면 */
+.transfer {
+    width: 375px;
+    height: 736px;
+    position: absolute;
+    z-index: 20;
+    top: 735px;
+    background-color: #FFF;
+    transition: .5s;
+}
+.transfer header {
+    margin-top: 77px;
+    margin-left: 29px;
+    font-size: 24px;
+    line-height: 35px;
+}
+.transfer .transfer__button {
+    width: 317px;
+    height: 47px;
+    border: 1px solid #858585;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: transparent;
+    margin: 41px 30px 44px;
+    font-size: 16px;
+    line-height: 23px;
+    font-weight: 300;
+}
+.transfer > ul {
+    margin: 0 30px;
+    width: 317px;
+    height: 488px;
+    overflow-y: scroll;
+}
+
+.transfer > ul > li {
+    width: 317px;
+    height: 54px;
+    display: flex;
+    margin-bottom: 17px;
+}
+.transfer > ul > li > img {
+    width: 54px;
+}
+.transfer > ul > li > .transfer__contents {
+    width: 263px;
+    box-sizing: border-box;
+    padding-left: 17px;
+}
+.transfer > ul > li > .transfer__contents > h4 {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    
+}
+.transfer > ul > li > .transfer__contents > h5 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+}
+.transfer > ul > li > .transfer__star-icon {
+    width: 24px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    color: #FFDB4C;
+}
+.transfer .transfer__cancel {
+    position: absolute;
+    top: 44px;
+    left: 336px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000;
+}
+
+/* transfer 직접입력 화면 */
+.transfer-input {
+    width: 375px;
+    height: 736px;
+    background-color: #FFF;
+    position: absolute;
+    top: 0;
+}
+.transfer-input header {
+    margin-top: 77px;
+    margin-left: 29px;
+    font-size: 24px;
+    line-height: 35px;
+}
+.transfer-input .transfer__cancel {
+    position: absolute;
+    top: 44px;
+    left: 336px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000;
+}
+.transfer-input .transfer-input__account {
+    width: 317px;
+    height: 54px;
+    margin: 38px 30px 30px;
+    display: flex;
+}
+.transfer-input .transfer-input__account img {
+    width: 54px;
+}
+.transfer-input .transfer-input__account .transfer__contents {
+    width: 263px;
+    box-sizing: border-box;
+    padding-left: 17px;
+}
+.transfer-input .transfer-input__account .transfer__contents h4 {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+}
+.transfer-input .transfer-input__account .transfer__contents h5 {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 23px;
+}
+.transfer-input .transfer-input__account .transfer__star-icon {
+    display: none;
+}
+.transfer-input .transfer-input__money {
+    width: 316px;
+    height: 53px;
+    margin: 0 auto 29px;
+    border-bottom: 3px solid #FF5F00;
+    text-align: right;
+}
+
+.transfer-input .transfer-input__money span:first-child {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 53px;
+    margin-right: 14px;
+    
+}
+.transfer-input .transfer-input__money span:last-child {
+    margin-right: 14px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 35px;
+}
+.transfer-input .transfer-input__balance {
+    width: 213px;
+    height: 27px;
+    margin: 0 auto 49px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.24px;
+}
+.transfer-input .transfer-input__number {
+    width: 284px;
+    height: 284px;
+    margin: 0 46px 58px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 53px;
+    color: #858585;
+}
+.transfer-input .transfer-input__number div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+    
+}
+.transfer-input .transfer-input__number div:last-child span:nth-child(2) {
+    padding-left: 15px;
+}
+.transfer-input .transfer-input__number .material-icons {
+    font-size: 36px;
+    color: #000;
+    padding-top: 15px;
+}
+
+.transfer-input .transfer-input__next-btn {
+    width: 375px;
+    height: 48px;
+    background-color: #FF5F00;
+    border-color: #FF5F00;
+    position: absolute;
+    top: 688px; 
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    text-align:center;
+    color: #fff;
+    box-sizing: border-box;
+    padding-top: 6px;
+    display: none;
+}

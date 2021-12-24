@@ -1,0 +1,18 @@
+.account__info .account__chart .chart-purple {
+    background-color: #C64CFF;
+}
+
+.payout .payout__bucket-list > ul > li:first-child > div.bucket-blue {
+    background-color: #0A73C3;
+}
+.payout .payout__bucket-list > ul > li:last-child  > div.bucket-yellow {
+    background-color: #EEBA00;
+}
+
+.payout.grandma {
+    top: 260px;
+    height: 420px;
+}
+.payout__inner.grandma {
+    height: 547px;
+}
