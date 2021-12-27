@@ -1,9 +1,11 @@
 .gnb {
-    width: 375px;
+    /* width: 375px; */
+    width: 100vw;
     height: 76px;
     position: fixed;
     z-index: 998;
-    top: 736px;
+    /* top: 736px; */
+    bottom: 0px;
     left: 0px;
     background: linear-gradient(163.63deg, #00BDB2 11.35%, #C4E7B8 139.96%);
 }

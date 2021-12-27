@@ -73,3 +73,8 @@ function next() {
    console.log('text: '+text);
    textEl.innerHTML = '정을수님께'+'<br/>'+text+'원이'+'<br/>'+'이체되었습니다.';
 }
+
+// 이체 성공 화면에서 확인 누르면 홈화면으로 돌아감
+function okay() {
+    location.href = "index.html";
+}

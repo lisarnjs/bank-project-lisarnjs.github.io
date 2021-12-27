@@ -4,13 +4,12 @@
 }
 
 
-.transfer-main {
-    /* height: 1000vh; */
-}
 /* transfer 기본 화면 */
 .transfer {
-    width: 375px;
-    height: 736px;
+    /* width: 375px; */
+    width: 100vw;
+    /* height: 736px; */
+    height: 100vh;
     position: absolute;
     z-index: 20;
     top: 735px;
@@ -23,6 +22,10 @@
     font-size: 24px;
     line-height: 35px;
 }
+.transfer .transfer__button-box {
+    width: 317px;
+    margin: 41px auto 44px;
+}
 .transfer .transfer__button {
     width: 317px;
     height: 47px;
@@ -30,13 +33,14 @@
     box-sizing: border-box;
     border-radius: 4px;
     background-color: transparent;
-    margin: 41px 30px 44px;
+    /* margin: 41px 30px 44px; */
+    align-items: center;
     font-size: 16px;
     line-height: 23px;
     font-weight: 300;
 }
 .transfer > ul {
-    margin: 0 30px;
+    margin: 0 auto;
     width: 317px;
     height: 488px;
     overflow-y: scroll;
@@ -73,10 +77,10 @@
     padding-top: 15px;
     color: #FFDB4C;
 }
-.transfer .transfer__cancel {
+.transfer span.transfer__cancel {
     position: absolute;
     top: 44px;
-    left: 336px;
+    right: 13px;
     font-weight: 300;
     font-size: 14px;
     line-height: 21px;
@@ -85,8 +89,9 @@
 
 /* transfer 직접입력 화면 */
 .transfer-input {
-    width: 375px;
-    height: 736px;
+    /* width: 375px; */
+    width: 100vw;
+    height: 100vh;
     background-color: #FFF;
     position: absolute;
     top: 0;
@@ -102,7 +107,8 @@
 .transfer__cancel {
     position: absolute;
     top: 44px;
-    left: 336px;
+    right: 13px;
+    /* left: 336px; */
     font-weight: 300;
     font-size: 14px;
     line-height: 21px;
@@ -111,7 +117,7 @@
 .transfer-input .transfer-input__account {
     width: 317px;
     height: 54px;
-    margin: 38px 30px 30px;
+    margin: 38px auto 30px;
     display: flex;
 }
 .transfer-input .transfer-input__account img {
@@ -168,7 +174,7 @@
 .transfer-input .transfer-input__number {
     width: 284px;
     height: 284px;
-    margin: 0 46px 58px;
+    margin: 0 auto 58px;
     font-weight: 700;
     font-size: 36px;
     line-height: 53px;
@@ -191,12 +197,14 @@
 }
 
 .transfer-input .transfer-input__next-btn {
-    width: 375px;
+    /* width: 375px; */
+    width: 100vw;
     height: 48px;
     background-color: #FF5F00;
     border-color: #FF5F00;
     position: absolute;
     top: 688px; 
+    /* bottom: 10px; */
     font-weight: 300;
     font-size: 24px;
     line-height: 36px;
@@ -210,8 +218,8 @@
 .transfer-clear {
     background-color: #FFF;
     position: absolute;
-    width: 375px;
-    height: 736px;
+    width: 100vw;
+    height: 100vh;
     top: 736px;
     transition: .3s;
 }
@@ -225,4 +233,19 @@
     line-height: 53px;
     letter-spacing: -0.24px;
     text-align: center;
+}
+.transfer-clear .transfer-input__next-btn {
+    width: 100vw;
+    height: 48px;
+    background-color: #FF5F00;
+    border-color: #FF5F00;
+    position: absolute;
+    top: 688px; 
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 36px;
+    text-align:center;
+    color: #fff;
+    box-sizing: border-box;
+    padding-top: 6px;
 }
