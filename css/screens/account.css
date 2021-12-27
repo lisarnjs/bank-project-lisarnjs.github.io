@@ -263,12 +263,12 @@ main {
 .payout__inner .payout__list .payout__list--title span:last-child {
     color: #B4B4B4;
 }
-.payout__inner .payout__list .payout__list--contents {
+.payout__inner .payout__list > ul {
     font-size: 18px;
     line-height: 27px;
     font-weight: 300;
 }
-.payout__inner .payout__list .payout__list--contents > li {
+.payout__inner .payout__list > ul > li {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
