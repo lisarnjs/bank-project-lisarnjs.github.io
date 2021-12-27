@@ -7,6 +7,15 @@ const transferEl = document.querySelector('.transfer');
 const inputBtn = document.querySelector('.transfer__button');
 const cancelEl = document.querySelector('.transfer__cancel');
 
+
+// 시간
+let today = document.querySelector('.time');
+let time = new Date();
+let hours = time.getHours(); // 시
+let minutes = time.getMinutes();  // 분
+
+today.textContent = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}`
+
 // payout 홈화면 올리기
 let payoutCount = 0;
 

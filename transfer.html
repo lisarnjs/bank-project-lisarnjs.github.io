@@ -16,12 +16,14 @@
     <link rel="stylesheet" href="./css/style.css" />
 
     <script defer src="https://kit.fontawesome.com/8db13e2679.js" crossorigin="anonymous"></script>
+    <script defer src="js/button.js"></script>
     <script defer src="./js/transfer.js"></script>
+    
 </head>
 <body>
     <div class="status-bar">
         <div class="status-bar__column">
-            <span>9:41</span>
+            <span class="time"></span>
         </div>
         <div class="status-bar__column">
             <i class="fas fa-signal "></i>
@@ -30,7 +32,7 @@
         </div>
     </div>
 
-    <main>
+    <main class="transfer-main">
         <section class="transfer-input">
             <header>이체</header>
             <div class="transfer-input__account">
@@ -73,11 +75,15 @@
                 </div>
             </div>
             <div class="transfer-input__next-btn" onclick="next()">다음</div>
-            <span class="transfer__cancel">취소</span>
+            <span class="transfer__cancel" onclick="cancel()">취소</span>
         </section>
 
         <!-- 이체 성공 화면 -->
-        <!-- <section class="transfer-clear"></section> -->
+        <section class="transfer-clear">
+            <header>이체</header>
+            <div class="clearbox"><span class="transfer-clear__text"></span></div>
+            <span class="transfer__cancel" onclick="cancel()">취소</span>
+        </section>
     </main>
 
     <nav class="gnb">
