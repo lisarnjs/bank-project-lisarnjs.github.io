@@ -12,18 +12,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> -->
 
+    
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- <script defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
     <script defer src="https://kit.fontawesome.com/8db13e2679.js" crossorigin="anonymous"></script>
     <script defer src="js/button.js"></script>
+    <script defer src="js/bank-json.js"></script>
+    
 </head>
 
 <body>
     <div class="status-bar">
         <div class="status-bar__column">
-            <span>9:41</span>
+            <span class="time"></span>
         </div>
         <div class="status-bar__column">
             <i class="fas fa-signal "></i>
@@ -32,205 +37,191 @@
         </div>
     </div>
 
-    <main>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <main class="swiper-slide">
 
-        <section class="main__account">
-            <!-- header, div, footer의 margin값을 각각 조정하기 위해 제거했습니다. -->
-            <!-- 같은 margin값은 variables.css에 root로 값을 저장해놓고 그때그때 쓰겠습니다 -->
-            <header class="account__header">
-                <!-- 프로필 사진 -->
-                <img class="account__header--avatar" src="./image/avatar01.png" alt="">
-                <!--생활비/용돈 등  -->
-                <h3 class="account__header--title">생활비</h3>
-                <!-- 아이콘 - 큐알/서치 -->
-                <div>
-                    <i><span class="material-icons">document_scanner</span></i>
-                    <i><span class="material-icons">search</span></i>
-                </div>
-            </header>
-
-            <div class="account__info">
-                <div class="account__number">
-                    <p>355-673877-78773</p>
-                </div>
-
-                <h3 class="acount__money">1,240,000<span>원</span></h3>
-
-                
-                <div class="account__chart">
-                    <div class="account__chart--score"></div>
-                    <div class="account__chart--red"></div>
-                    <div class="account__chart--gray"></div>
-                </div>
-                
-                <div class="account__chart--icon">
-                    <i><span class="material-icons">bar_chart</span></i>
-                </div>
-
-                <p class="account__chart--score-msg">5일 동안 210,000원 남음</p>
-
-                <a class="account__transfer--btn">이체</a>
-            </div>
-
-            <footer class="account__ad">
-                <span>지금 낮은 이자로 100만원을 신청하세요!<a>GO</a></span>
-            </footer>
-
-
-        </section>
-
-        <section class="payout">
-            <div class="payout__scroll-btn"></div>
-            <div class="payout__bucket-list">
-                <ul>
-                    <li>
-                        <div>여행가자!<br>842,200원</div>
-                        <div></div>
-                    </li>
-                    <li>
-                        <div>냉장고사기<br>142,200원</div>
-                        <div></div>
-                    </li>
-                    <li class="payout__bucket-list--moneybank">
-                        <span class="material-icons">add_circle</span>
-                        <span>저금통 만들기</span>
-                    </li> 
-                </ul>
-                
-                
-            </div>
-            <div class="payout__inner">
-                <div class="payout__list">
-                    <header class="payout__list--title">
-                        <span>오늘</span>
-                        <span>127,600원 지출</span>
+                <section class="main__account">
+                    <!-- header, div, footer의 margin값을 각각 조정하기 위해 제거했습니다. -->
+                    <!-- 같은 margin값은 variables.css에 root로 값을 저장해놓고 그때그때 쓰겠습니다 -->
+                    <header class="account__header">
+                        <!-- 프로필 사진 -->
+                        <img class="account__header--avatar" src="./image/avatar01.png" alt="">
+                        <!--생활비/용돈 등  -->
+                        <h3 class="account__header--title">생활비</h3>
+                        <!-- 아이콘 - 큐알/서치 -->
+                        <div>
+                            <i><span class="material-icons">document_scanner</span></i>
+                            <i><span class="material-icons">search</span></i>
+                        </div>
                     </header>
-                    <ul class="payout__list--contents">
-                        <li><span>미스터피자</span><span>32,000</span></li>
-                        <li><span>택시</span><span>4,800</span></li>
-                        <li><span>이마트</span><span>86,000</span></li>
-                        <li><span>스타벅스</span><span>4,800</span></li>
-                        <li><span>전갈수</span><span>+20,000</span></li>
+        
+                    <div class="account__info">
+                        <div class="account__number">
+                            <p>355-673877-78773</p>
+                        </div>
+        
+                        <h3 class="acount__money">1,240,000<span>원</span></h3>
+        
+                        
+                        <div class="account__chart">
+                            <div class="account__chart--score"></div>
+                            <div class="account__chart--red"></div>
+                            <div class="account__chart--gray"></div>
+                        </div>
+                        
+                        <div class="account__chart--icon">
+                            <i><span class="material-icons">bar_chart</span></i>
+                        </div>
+        
+                        <p class="account__chart--score-msg">5일 동안 210,000원 남음</p>
+        
+                        <a class="account__transfer--btn">이체</a>
+                    </div>
+        
+                    <footer class="account__ad">
+                        <span>지금 낮은 이자로 100만원을 신청하세요!<a>GO</a></span>
+                    </footer>
+        
+        
+                </section>
+        
+                <section class="payout">
+                    <div class="payout__scroll-btn"></div>
+                    <div class="payout__bucket-list">
+                        <ul>
+                            <li>
+                                <div>여행가자!<br>842,200원</div>
+                                <div></div>
+                            </li>
+                            <li>
+                                <div>냉장고사기<br>142,200원</div>
+                                <div></div>
+                            </li>
+                            <li class="payout__bucket-list--moneybank">
+                                <span class="material-icons">add_circle</span>
+                                <span>저금통 만들기</span>
+                            </li> 
+                        </ul>
+                        
+                        
+                    </div>
+                    <div class="payout__inner">
+                        <div class="payout__list">
+                            <header class="payout__list--title">
+                                <strong>오늘</strong>
+                                <span>64,000원 지출</span>
+                            </header>
+                        </div>
+                        <div class="payout__list">
+                            <header class="payout__list--title">
+                                <strong>어제</strong>
+                                <span>64,000원 지출</span>
+                            </header>
+                        </div>
+                        <div class="payout__list">
+                            <header class="payout__list--title">
+                                <strong>2일 전</strong>
+                                <span>64,000원 지출</span>
+                            </header>
+                        </div>
+                    </div>
+                </section>
+        
+                <section class="transfer">
+                    <header>이체</header>
+                    <input class="transfer__button" type="button" value="직접입력" />
+                    <ul>
+                        <li>
+                            <img src="image/avatar04.png" alt="정을수">
+                            <div class="transfer__contents">
+                                <h4>정을수</h4>
+                                <h5>신한 112048393002</h5>
+                            </div>
+                            <div class="transfer__star-icon">
+                                <span class="material-icons">star</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./image/avatar05.png" alt="신이현">
+                            <div class="transfer__contents">
+                                <h4>신이현</h4>
+                                <h5>국민 112048393002</h5>
+                            </div>
+                            <div  class="transfer__star-icon">
+                                <span class="material-icons">star</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./image/avatar06.png" alt="웅진코웨이">
+                            <div class="transfer__contents">
+                                <h4>웅진코웨이</h4>
+                                <h5>국민 112048393002</h5>
+                            </div>
+                            <div  class="transfer__star-icon">
+                                <span class="material-icons">star</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./image/avatar07.png" alt="기강 슈퍼">
+                            <div class="transfer__contents">
+                                <h4>기강 슈퍼</h4>
+                                <h5>하나 112048393002</h5>
+                            </div>
+                            <div  class="transfer__star-icon">
+                                <span class="material-icons">star</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./image/avatar08.png" alt="김민석">
+                            <div class="transfer__contents">
+                                <h4>김민석</h4>
+                                <h5>하나 112048393002</h5>
+                            </div>
+                            <div  class="transfer__star-icon">
+                                <span class="material-icons">star</span>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./image/avatar09.png" alt="기성훈">
+                            <div class="transfer__contents">
+                                <h4>기성훈</h4>
+                                <h5>하나 112048393002</h5>
+                            </div>
+                            <div  class="transfer__star-icon">
+                                <span class="material-icons">star</span>
+                            </div>
+                        </li>
                     </ul>
-                </div>
-                <div class="payout__list">
-                    <header class="payout__list--title">
-                        <strong>어제</strong>
-                        <span>71,600원 지출</span>
-                    </header>
-                    <ul class="payout__list--contents">
-                        <li><span>CU</span><span>8,900</span></li>
-                        <li><span>김경남</span><span>+31,000</span></li>
-                        <li><span>애슐리</span><span>31,000</span></li>
-                        <li><span>교보문고</span><span>18,000</span></li>
-                        <li><span>쿠팡</span><span>10,500</span></li>
-                        <li><span>미스터피자</span><span>32,000</span></li>
-                    </ul>
-                </div>
-                <div class="payout__list">
-                    <header class="payout__list--title">
-                        <strong>2일전</strong>
-                        <span>64,000원 지출</span>
-                    </header>
-                    <ul class="payout__list--contents">
-                        <li><span>알파문구</span><span>46,000</span></li>
-                        <li><span>스타벅스</span><span>18,000</span></li>
-                        <li><span>미스터피자</span><span>32,000</span></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="transfer">
-            <header>이체</header>
-            <input class="transfer__button" type="button" value="직접입력" />
-            <ul>
-                <li>
-                    <img src="image/avatar04.png" alt="정을수">
-                    <div class="transfer__contents">
-                        <h4>정을수</h4>
-                        <h5>신한 112048393002</h5>
+                    <span class="transfer__cancel">취소</span>
+                </section>
+        
+                <section class="outgoings">
+                    <header>지출관리</header>
+                    <div class="outgoings__setting">
+                        <h3>기준금액설정</h3>
+                        <div class="outgoings__chart">
+                            <div class="outgoings__chart--score"></div>
+                            <div class="outgoings__chart--red"></div>
+                            <div class="outgoings__chart--gray"></div>
+                        </div>
+                        <span>2,100,000원</span>
                     </div>
-                    <div class="transfer__star-icon">
-                        <span class="material-icons">star</span>
+                    <div class="outgoings__report">
+                        <h3>일간 리포트</h3>
                     </div>
-                </li>
-                <li>
-                    <img src="./image/avatar05.png" alt="신이현">
-                    <div class="transfer__contents">
-                        <h4>신이현</h4>
-                        <h5>국민 112048393002</h5>
+                    <div class="outgoings__patterns">
+                        <h3>6월 지출 패턴</h3>
                     </div>
-                    <div  class="transfer__star-icon">
-                        <span class="material-icons">star</span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/avatar06.png" alt="웅진코웨이">
-                    <div class="transfer__contents">
-                        <h4>웅진코웨이</h4>
-                        <h5>국민 112048393002</h5>
-                    </div>
-                    <div  class="transfer__star-icon">
-                        <span class="material-icons">star</span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/avatar07.png" alt="기강 슈퍼">
-                    <div class="transfer__contents">
-                        <h4>기강 슈퍼</h4>
-                        <h5>하나 112048393002</h5>
-                    </div>
-                    <div  class="transfer__star-icon">
-                        <span class="material-icons">star</span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/avatar08.png" alt="김민석">
-                    <div class="transfer__contents">
-                        <h4>김민석</h4>
-                        <h5>하나 112048393002</h5>
-                    </div>
-                    <div  class="transfer__star-icon">
-                        <span class="material-icons">star</span>
-                    </div>
-                </li>
-                <li>
-                    <img src="./image/avatar09.png" alt="기성훈">
-                    <div class="transfer__contents">
-                        <h4>기성훈</h4>
-                        <h5>하나 112048393002</h5>
-                    </div>
-                    <div  class="transfer__star-icon">
-                        <span class="material-icons">star</span>
-                    </div>
-                </li>
-            </ul>
-            <span class="transfer__cancel">취소</span>
-        </section>
-
-        <section class="outgoings">
-            <header>지출관리</header>
-            <div class="outgoings__setting">
-                <h3>기준금액설정</h3>
-                <div class="outgoings__chart">
-                    <div class="outgoings__chart--score"></div>
-                    <div class="outgoings__chart--red"></div>
-                    <div class="outgoings__chart--gray"></div>
-                </div>
-                <span>2,100,000원</span>
-            </div>
-            <div class="outgoings__report">
-                <h3>일간 리포트</h3>
-            </div>
-            <div class="outgoings__patterns">
-                <h3>6월 지출 패턴</h3>
-            </div>
-        </section>
-    </main>
+                </section>
+            </main>
+        
+            
+        </div>
+    </div>
+    
 
     <nav class="gnb">
-        <!--하단 고정 nav가 하나이기 때문에 그냥 nav라고 붙혀봤습니다-->
         <ul class="gnb__list">
             <li class="gnb__btn"><span class="material-icons">home</span></li>
             <li class="gnb__btn"><span class="material-icons">sync_alt</span></li>
@@ -238,6 +229,8 @@
             <li class="gnb__btn"><span class="material-icons">more_horiz</span></li>
         </ul>
     </nav>
+
+    
 </body>
 
 </html>

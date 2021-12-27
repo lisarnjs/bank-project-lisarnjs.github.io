@@ -1,9 +1,12 @@
 // 취소 클릭 시 메인 홈화면으로 이동
-const cancel = document.querySelector('.transfer__cancel');
+// const cancel = document.querySelector('.transfer__cancel');
 
-cancel.addEventListener('click', () => {
+// cancel.addEventListener('click', () => {
+//     location.href = "index.html";
+// });
+function cancel() {
     location.href = "index.html";
-});
+}
 
 // 해당 숫자를 누르면 보낼 금액이 입력되는 기능
 const inputNumEl = document.querySelector('.transfer-input__number');
@@ -60,7 +63,13 @@ function deleteNum() {
 }
 
 // 숫자 입력 시 다음 버튼이 뜨고 클릭시 이체 완료 화면으로 넘어감
-// 다음 버튼 클릭 -> section1 display:none -> section2 display:block
-// function next() {}
-
-// 이체 화면에서 해당 이름 innerHTML의 정보를 가져와서 직접입력화면의 이체 상대프로필 변경하기
+function next() {
+   document.querySelector('.transfer-clear').style.top='0px';
+   console.log('입력한 숫자: '+inputEl.textContent);
+   console.log('type: '+typeof inputEl.innerHTML);
+   // 이체 화면에서 해당 이름 innerHTML의 정보를 가져와서 직접입력화면의 이체 상대프로필 변경하기
+   let text =  `${inputEl.innerHTML}`;
+   const textEl = document.querySelector('.transfer-clear__text');
+   console.log('text: '+text);
+   textEl.innerHTML = '정을수님께'+'<br/>'+text+'원이'+'<br/>'+'이체되었습니다.';
+}

@@ -3,6 +3,10 @@
     top: 0;
 }
 
+
+.transfer-main {
+    /* height: 1000vh; */
+}
 /* transfer 기본 화면 */
 .transfer {
     width: 375px;
@@ -87,13 +91,15 @@
     position: absolute;
     top: 0;
 }
-.transfer-input header {
+/* .transfer-input */
+.transfer-main header {
     margin-top: 77px;
     margin-left: 29px;
     font-size: 24px;
     line-height: 35px;
 }
-.transfer-input .transfer__cancel {
+/* .transfer-input  */
+.transfer__cancel {
     position: absolute;
     top: 44px;
     left: 336px;
@@ -199,4 +205,24 @@
     box-sizing: border-box;
     padding-top: 6px;
     display: none;
+}
+
+.transfer-clear {
+    background-color: #FFF;
+    position: absolute;
+    width: 375px;
+    height: 736px;
+    top: 736px;
+    transition: .3s;
+}
+.transfer-clear .clearbox {
+    width: 240px;
+    margin: 205px auto;
+}
+.transfer-clear .transfer-clear__text {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 53px;
+    letter-spacing: -0.24px;
+    text-align: center;
 }
